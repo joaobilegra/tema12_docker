@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('run job1'){
             steps{
-                build job: 'deploy', parameters: [string(name: 'deploy', value: '')]
+                build job: 'Jenkinsfile1', parameters: [string(name: 'Jenkinsfile1', value: '')]
                 
             }
         }
