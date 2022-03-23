@@ -1,0 +1,12 @@
+pipeline {
+
+    agent any
+    stages {
+       
+        stage('Run container'){
+            steps{
+                sh 'python3 Main.py'
+            }
+        }
+    }
+}
