@@ -1,0 +1,16 @@
+pipeline {
+
+    agent any
+    stages {
+        stage('Run container'){
+            steps{
+                sh 'docker run -dti -p 8090:8080 --name ubuntu_python ubuntu_python'
+            }
+        }
+        stage('Run container'){
+            steps{
+                sh 'python3 Main.py'
+            }
+        }
+    }
+}
