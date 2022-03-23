@@ -1,11 +1,11 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('run job1'){
-            steps{
-                build job: 'bake/Jenkinsfile' 
-                
+    stages {
+        stage ('Build application') {
+            steps {
+                sh 'docker build -t ubuntu_python .'
+               
             }
         }
     }
-}    
+}
