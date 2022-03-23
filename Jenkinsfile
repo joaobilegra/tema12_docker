@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('run job1'){
             steps{
-                build job: 'pipeline_B' 
+                build job: 'bake/Jenkinsfile' 
                 
             }
         }
