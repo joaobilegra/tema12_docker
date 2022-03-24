@@ -7,6 +7,13 @@ pipeline {
                 sh 'docker run -dti -p 8090:8080 --name ubuntu_python ubuntu_python'
             }
         }
+       stage('Test app'){
+            steps{
+                sh 'curl localhost:8090'
+            }
+        }
+
+    
         
     }
 }

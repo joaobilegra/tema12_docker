@@ -5,14 +5,14 @@ pipeline{
          steps{
             build job: 'bake'
          }
-        }
+    }
     stage('Run job2'){
        steps{
                 build job: 'deploy'
                 
             }
-     }    
-   }
+       }    
+    }
     
 }
        
