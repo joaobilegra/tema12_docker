@@ -7,6 +7,8 @@ RUN apt-get update \
   && ln -s /usr/bin/python3 python \
   && pip3 install --upgrade pip
 
+RUN apt-get install curl -y
+
 WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt

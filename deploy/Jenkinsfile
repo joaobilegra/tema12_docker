@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Run container'){
             steps{
-                sh 'docker run -dti -p 8090:8080 --name ubuntu_python ubuntu_python'
+                sh 'docker run -dti -p 8080:8080 --name ubuntu_python ubuntu_python'
             }
         }
        stage('Test app'){
             steps{
-                sh 'curl localhost:8090'
+                sh 'docker exec -it ubuntu_python curl localhost:8080'
             }
         }
 
